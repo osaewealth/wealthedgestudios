@@ -1,0 +1,204 @@
+"use client";
+
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+
+const SLIDES = [
+    {
+        id: "01",
+        title: "ELITE WEB",
+        subtitle: "ENGINEERING",
+        description: "We are shaping the digital landscape of businesses through high-performance web engineering. We optimize processes and drive innovation to build your competitive edge.",
+        image: "/img/webbbbb.jpg",
+        label: "// Web Development Excellence"
+    },
+    {
+        id: "02",
+        title: "STRATEGIC",
+        subtitle: "BRANDING",
+        description: "Forging powerful visual identities and narratives that resonate with your audience and build immediate trust across all digital touchpoints.",
+        image: "/img/branding.jpg",
+        label: "// Elite Brand Design"
+    },
+    {
+        id: "03",
+        title: "SEARCH ENGINE",
+        subtitle: "DOMINANCE",
+        description: "Drive organic traffic and dominate search results with our advanced SEO strategies. We ensure your brand commands the attention it deserves.",
+        image: "/img/SEo.jpg",
+        label: "// Advanced SEO Strategies"
+    },
+    {
+        id: "04",
+        title: "E-COMMERCE",
+        subtitle: "POWERHOUSES",
+        description: "Building secure and scalable e-commerce platforms with seamless payment gateway integrations to turn your clicks into sustainable cash flow.",
+        image: "/img/ecommerceimage.jpg",
+        label: "// High-Conversion Retail"
+    }
+];
+
+export default function Hero() {
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % SLIDES.length);
+        }, 8000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const next = () => setCurrent((prev) => (prev + 1) % SLIDES.length);
+    const prev = () => setCurrent((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
+
+    return (
+        <section className="relative h-screen w-full overflow-hidden bg-brand-charcoal">
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={current}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1 }}
+                    className="absolute inset-0"
+                >
+                    {/* Background Image with Sharpening Filter */}
+                    <Image
+                        src={SLIDES[current].image}
+                        alt={SLIDES[current].title}
+                        fill
+                        className="object-cover contrast-[1.1] brightness-[1.1] saturate-[1.1]"
+                        priority
+                    />
+
+                    {/* Dark Overlay - Reduced opacity for clarity, removed blur */}
+                    <div className="absolute inset-0 bg-[#0F172A]/40" />
+
+                    {/* Geometric Overlays (Blue Polygons inspired by user reference) */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-40 dark:opacity-60" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <motion.polygon
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1.5, ease: "easeOut" }}
+                            points="0,0 40,0 25,100 0,100"
+                            className="fill-brand-gold/10"
+                        />
+                        <motion.polygon
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1.5, ease: "easeOut" }}
+                            points="100,0 70,0 85,100 100,100"
+                            className="fill-brand-navy/20"
+                        />
+                        <motion.path
+                            initial={{ pathLength: 0, opacity: 0 }}
+                            animate={{ pathLength: 1, opacity: 0.2 }}
+                            transition={{ duration: 2, delay: 0.5 }}
+                            d="M 30 0 L 15 100 M 75 0 L 90 100"
+                            stroke="currentColor"
+                            strokeWidth="0.1"
+                            fill="none"
+                            className="text-brand-gold"
+                        />
+                    </svg>
+
+                    {/* Content Container */}
+                    <div className="container mx-auto px-6 h-full flex flex-col justify-center relative z-10">
+                        <div className="max-w-4xl">
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="text-brand-gold font-mono text-sm md:text-base tracking-[0.2em] mb-6"
+                            >
+                                {SLIDES[current].label}
+                            </motion.p>
+
+                            <motion.h1
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.4 }}
+                                className="text-6xl md:text-8xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter text-white mb-8"
+                            >
+                                {SLIDES[current].title} <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-transparent via-white/40 to-white/10 decoration-brand-gold decoration-4 underline-offset-[20px]">
+                                    {SLIDES[current].subtitle}
+                                </span>
+                            </motion.h1>
+
+                            <motion.p
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.6 }}
+                                className="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed mb-12"
+                            >
+                                {SLIDES[current].description}
+                            </motion.p>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.8 }}
+                                className="flex items-center gap-8"
+                            >
+                                <Link href="/services">
+                                    <button className="px-10 py-5 bg-brand-gold text-brand-charcoal font-black rounded-sm hover:scale-105 transition-all shadow-2xl flex items-center gap-3 group uppercase tracking-widest text-sm">
+                                        Learn More
+                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </Link>
+                            </motion.div>
+                        </div>
+                    </div>
+                </motion.div>
+            </AnimatePresence>
+
+            {/* Slider Navigation */}
+            <div className="absolute bottom-12 left-0 right-0 z-20">
+                <div className="container mx-auto px-6 flex items-center justify-between">
+                    <div className="flex items-center gap-8">
+                        <div className="flex items-center gap-4 text-white font-black tracking-widest text-lg">
+                            <button onClick={prev} className="hover:text-brand-gold transition-colors">
+                                <ChevronLeft className="w-8 h-8" />
+                            </button>
+                            <span className="text-brand-gold">{SLIDES[current].id}</span>
+                            <span className="opacity-30">/</span>
+                            <span className="opacity-50">0{SLIDES.length}</span>
+                            <button onClick={next} className="hover:text-brand-gold transition-colors">
+                                <ChevronRight className="w-8 h-8" />
+                            </button>
+                        </div>
+
+                        {/* Progress Bar */}
+                        <div className="hidden md:flex w-64 h-1 bg-white/10 rounded-full overflow-hidden">
+                            <motion.div
+                                key={current}
+                                initial={{ width: "0%" }}
+                                animate={{ width: "100%" }}
+                                transition={{ duration: 8, ease: "linear" }}
+                                className="h-full bg-brand-gold"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Quick Select Indicators */}
+                    <div className="flex gap-3">
+                        {SLIDES.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => setCurrent(i)}
+                                className={`w-12 h-1 rounded-full bg-white transition-all duration-500 ${current === i ? "opacity-100 w-16 bg-brand-gold" : "opacity-20"}`}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Aesthetic Grain Overlay - Reduced for clarity */}
+            <div className="absolute inset-0 z-10 pointer-events-none opacity-[0.01] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        </section>
+    );
+}
