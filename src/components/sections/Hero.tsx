@@ -12,7 +12,7 @@ const SLIDES = [
         title: "ELITE WEB",
         subtitle: "ENGINEERING",
         description: "High-performance, custom-built websites using the latest technologies. We engineer digital experiences that are fast, intuitive, and built to scale.",
-        image: "/img/webbbbb.jpg?v=1",
+        image: "/img/newelitewebpicture.jpg?v=1",
         label: "// Web Development Excellence"
     },
     {
@@ -20,7 +20,7 @@ const SLIDES = [
         title: "STRATEGIC",
         subtitle: "SEO DOMINANCE",
         description: "Drive organic traffic and dominate search results with our advanced SEO strategies. We ensure your brand commands the attention it deserves.",
-        image: "/img/SEo.jpg?v=1",
+        image: "/img/digitalpresencenew.jpg?v=1",
         label: "// Advanced Search Engine Optimization"
     },
     {
@@ -28,7 +28,7 @@ const SLIDES = [
         title: "PREMIUM",
         subtitle: "BRAND DESIGN",
         description: "Forging powerful visual identities and narratives that resonate with your audience and build immediate trust across all digital touchpoints.",
-        image: "/img/branding.jpg?v=1",
+        image: "/img/brandingnew.jpg?v=1",
         label: "// Strategic Visual Identity"
     },
     {

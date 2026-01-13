@@ -17,11 +17,11 @@ export default function Footer() {
                     <div className="col-span-1 lg:col-span-1">
                         <Link href="/" className="flex items-center gap-3 mb-8">
                             <Image
-                                src="/logo.png"
+                                src="/logo.png?v=2"
                                 alt="Wealth Edge Studios Logo"
-                                width={36}
-                                height={36}
-                                className="w-9 h-9 object-contain"
+                                width={48}
+                                height={48}
+                                className="w-12 h-12 object-contain"
                             />
                             <span className="text-xl font-black tracking-tighter text-foreground uppercase">
                                 Wealth Edge <span className="text-brand-gold">Studios</span>

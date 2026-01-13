@@ -11,7 +11,6 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
     { name: "About", href: "/about" },
-    { name: "Founder", href: "/ceo" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Pricing", href: "/pricing" },
 ];
@@ -48,11 +47,11 @@ export default function Navigation() {
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-3">
                         <Image
-                            src="/logo.png"
+                            src="/logo.png?v=2"
                             alt="Wealth Edge Studios Logo"
-                            width={40}
-                            height={40}
-                            className="w-10 h-10 object-contain"
+                            width={56}
+                            height={56}
+                            className="w-14 h-14 object-contain"
                         />
                         <span className={`text-xl font-black tracking-tighter uppercase transition-colors ${isScrolled || pathname !== "/" ? "text-foreground" : "text-white"}`}>
                             Wealth Edge <span className="text-brand-gold">Studios</span>
@@ -68,10 +67,10 @@ export default function Navigation() {
                             onMouseLeave={() => setIsServicesOpen(false)}
                         >
                             <button className={`flex items-center gap-1.5 text-sm font-bold transition-colors ${pathname.startsWith('/services')
-                                    ? 'text-brand-gold'
-                                    : isScrolled || pathname !== "/"
-                                        ? 'text-slate-500 dark:text-slate-300 hover:text-brand-gold'
-                                        : 'text-white/90 hover:text-brand-gold'
+                                ? 'text-brand-gold'
+                                : isScrolled || pathname !== "/"
+                                    ? 'text-slate-500 dark:text-slate-300 hover:text-brand-gold'
+                                    : 'text-white/90 hover:text-brand-gold'
                                 }`}>
                                 Services <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                             </button>

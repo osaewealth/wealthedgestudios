@@ -401,6 +401,7 @@ export const CEO_DATA = {
     role: "Front End Website Developer",
     email: "andrewvalmount@gmail.com",
     phone: "+233 504148575",
+    image: "/img/founder.jpeg",
     location: "Spintex-Accra, Ghana",
     bio: "Hello, I'm Andrew Osae, a passionate and detail-oriented web designer based in Accra, Ghana. I specialize in creating clean, responsive, and SEO-optimized websites using WordPress, HTML, and other modern web tools. Through my agency, WealthEdge Studio, I help real estate agents, hotel owners, and restaurant businesses build an impressive online presence that drives results. Whether you're starting from scratch or need a digital makeover, I'm here to bring your vision to life with functionality and finesse.",
     competencies: [

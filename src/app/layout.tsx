@@ -15,6 +15,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Wealth Edge Studios | Premium Digital Agency & Web Design",
   description: "World-class website design, SEO, and digital marketing services in Ghana. Elevate your brand with Wealth Edge Studios.",
+  icons: {
+    icon: "/fav.svg",
+  },
 };
 
 import { ThemeProvider } from "@/components/providers/ThemeProvider";

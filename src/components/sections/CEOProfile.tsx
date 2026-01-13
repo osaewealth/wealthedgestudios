@@ -51,7 +51,7 @@ export default function CEOProfile() {
                         <div className="glass rounded-[3rem] p-8 border border-border overflow-hidden relative group">
                             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-8">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"
+                                    src={CEO_DATA.image || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"}
                                     alt={CEO_DATA.name}
                                     fill
                                     className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
