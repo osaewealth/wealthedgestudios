@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
+import { CEO_DATA } from "@/lib/constants";
+
 export default function About() {
     return (
         <section id="about" className="py-24 bg-background relative border-t border-black/5 dark:border-white/5">
@@ -21,7 +23,7 @@ export default function About() {
                             <div className="absolute inset-0 bg-brand-navy rounded-3xl" />
                             <div className="absolute inset-0 overflow-hidden rounded-3xl">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop"
+                                    src="/img/teammembers.jpg?v=1"
                                     alt="Our Team"
                                     fill
                                     className="object-cover"
@@ -68,7 +70,7 @@ export default function About() {
 
                             <div className="grid grid-cols-2 gap-8 pt-4">
                                 <div>
-                                    <h4 className="font-bold text-xl mb-1">2010</h4>
+                                    <h4 className="font-bold text-xl mb-1">2019</h4>
                                     <p className="text-sm text-slate-500 uppercase tracking-widest">Founded Year</p>
                                 </div>
                                 <div>
@@ -105,9 +107,9 @@ export default function About() {
                     <div className="flex flex-col md:flex-row items-center gap-12 bg-slate-50 dark:bg-white/[0.02] p-12 rounded-[3.5rem] border border-border overflow-hidden relative group">
                         <div className="flex-1">
                             <span className="text-xs font-black text-brand-gold uppercase tracking-[0.3em] mb-4 block">Our Captain</span>
-                            <h2 className="text-4xl font-black mb-6 text-foreground">Meet <span className="text-brand-gold">Andrew Osae</span></h2>
+                            <h2 className="text-4xl font-black mb-6 text-foreground">Meet <span className="text-brand-gold">{CEO_DATA.name}</span></h2>
                             <p className="text-slate-500 mb-8 max-w-xl text-lg leading-relaxed">
-                                Our founder, Andrew Osae, is a visionary web developer with over 7 years of experience in the digital space.
+                                Our founder, {CEO_DATA.name}, is a visionary web developer with over 7 years of experience in the digital space.
                                 He leads Wealth Edge Studios with a commitment to technical excellence and high-impact design.
                             </p>
                             <Link
@@ -121,8 +123,8 @@ export default function About() {
                             <div className="absolute inset-0 bg-brand-gold/10 rounded-2xl blur-3xl group-hover:bg-brand-gold/20 transition-all duration-700" />
                             <div className="relative h-full w-full rounded-[2rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"
-                                    alt="Andrew Osae"
+                                    src={CEO_DATA.image || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"}
+                                    alt={CEO_DATA.name}
                                     fill
                                     className="object-cover"
                                 />

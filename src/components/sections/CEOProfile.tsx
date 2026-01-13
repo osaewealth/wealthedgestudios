@@ -83,11 +83,15 @@ export default function CEOProfile() {
                             </div>
 
                             <div className="flex items-center gap-3 mt-8">
-                                {[Github, Twitter, Linkedin].map((Icon, i) => (
-                                    <Link key={i} href="#" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
-                                        <Icon size={18} />
-                                    </Link>
-                                ))}
+                                <Link href="https://github.com/andrewosae" target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
+                                    <Github size={18} />
+                                </Link>
+                                <Link href="https://twitter.com/andrewosae" target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
+                                    <Twitter size={18} />
+                                </Link>
+                                <Link href="https://linkedin.com/in/andrewosae" target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
+                                    <Linkedin size={18} />
+                                </Link>
                             </div>
                         </div>
                     </motion.div>

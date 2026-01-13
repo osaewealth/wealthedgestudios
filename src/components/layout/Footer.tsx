@@ -32,15 +32,18 @@ export default function Footer() {
                             strategic SEO, and powerful digital brands that drive results.
                         </p>
                         <div className="flex items-center gap-4">
-                            {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                                <a
-                                    key={i}
-                                    href="#"
-                                    className="w-10 h-10 glass rounded-full flex items-center justify-center border border-black/5 dark:border-white/5 hover:border-brand-gold/30 hover:text-brand-gold transition-all text-foreground"
-                                >
-                                    <Icon className="w-4 h-4" />
-                                </a>
-                            ))}
+                            <a href="https://facebook.com/andrewosae" target="_blank" className="w-10 h-10 glass rounded-full flex items-center justify-center border border-black/5 dark:border-white/5 hover:border-brand-gold/30 hover:text-brand-gold transition-all text-foreground">
+                                <Facebook className="w-4 h-4" />
+                            </a>
+                            <a href="https://twitter.com/andrewosae" target="_blank" className="w-10 h-10 glass rounded-full flex items-center justify-center border border-black/5 dark:border-white/5 hover:border-brand-gold/30 hover:text-brand-gold transition-all text-foreground">
+                                <Twitter className="w-4 h-4" />
+                            </a>
+                            <a href="https://instagram.com/andrewosae" target="_blank" className="w-10 h-10 glass rounded-full flex items-center justify-center border border-black/5 dark:border-white/5 hover:border-brand-gold/30 hover:text-brand-gold transition-all text-foreground">
+                                <Instagram className="w-4 h-4" />
+                            </a>
+                            <a href="https://linkedin.com/in/andrewosae" target="_blank" className="w-10 h-10 glass rounded-full flex items-center justify-center border border-black/5 dark:border-white/5 hover:border-brand-gold/30 hover:text-brand-gold transition-all text-foreground">
+                                <Linkedin className="w-4 h-4" />
+                            </a>
                         </div>
                     </div>
 
