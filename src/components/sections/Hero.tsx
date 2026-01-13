@@ -56,6 +56,20 @@ export default function Hero() {
 
     return (
         <section className="relative h-screen w-full overflow-hidden bg-brand-charcoal">
+            {/* Preload all hero images to prevent lag */}
+            <div className="hidden">
+                {SLIDES.map((slide) => (
+                    <Image
+                        key={slide.id}
+                        src={slide.image}
+                        alt={slide.title}
+                        fill
+                        priority
+                        sizes="1px"
+                    />
+                ))}
+            </div>
+
             <AnimatePresence mode="popLayout">
                 <motion.div
                     key={current}
