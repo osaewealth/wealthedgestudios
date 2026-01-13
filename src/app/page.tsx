@@ -10,6 +10,7 @@ import { Zap, Target, Award, Rocket, ArrowRight, CheckCircle2, Star, Search, Shi
 import { SERVICES } from "@/lib/constants";
 
 import Image from "next/image";
+import ecommerceImage from "@/assets/newecommerce.jpg";
 
 export default function Home() {
   return (
@@ -161,13 +162,15 @@ export default function Home() {
             </div>
 
             <div className="flex-1 relative">
-              <div className="p-1 glass rounded-[4rem] border border-black/5 dark:border-white/10 overflow-hidden shadow-2xl">
+              <div className="p-1 glass rounded-[4rem] border border-black/5 dark:border-white/10 overflow-hidden shadow-2xl relative aspect-[4/3] w-full">
                 <Image
-                  src="/img/ecommerce-platforms.jpg"
+                  src={ecommerceImage}
                   alt="Ecommerce Excellence"
-                  width={800}
-                  height={600}
+                  fill
                   className="rounded-[3.8rem] object-cover"
+                  placeholder="blur"
+                  quality={60}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="absolute -bottom-10 -left-10 p-10 glass rounded-[2.5rem] border border-brand-gold/20 shadow-2xl backdrop-blur-3xl animate-float">
@@ -210,19 +213,19 @@ export default function Home() {
               </Link>
             </div>
             <div className="flex-1 relative">
-              <div className="p-16 glass rounded-[4rem] border border-black/5 dark:border-white/10 relative overflow-hidden group">
+              <div className="p-10 glass rounded-[3rem] border border-black/5 dark:border-white/10 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-brand-gold/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
                 <div className="flex gap-1 mb-8 text-brand-gold">
-                  {[1, 2, 3, 4, 5].map(s => <Star key={s} className="w-6 h-6 fill-current" />)}
+                  {[1, 2, 3, 4, 5].map(s => <Star key={s} className="w-5 h-5 fill-current" />)}
                 </div>
-                <p className="text-3xl font-bold text-foreground mb-10 leading-relaxed italic">
+                <p className="text-2xl font-bold text-foreground mb-10 leading-relaxed italic">
                   "Wealth Edge Studios didn't just build us a website; they built us a digital machine. Our inquiries have tripled in three months."
                 </p>
                 <div className="flex items-center gap-5 border-t border-black/5 dark:border-white/5 pt-10">
-                  <div className="w-16 h-16 rounded-full bg-brand-gold/20 flex items-center justify-center font-black text-brand-gold text-xl uppercase">KM</div>
+                  <div className="w-14 h-14 rounded-full bg-brand-gold/20 flex items-center justify-center font-black text-brand-gold text-lg uppercase">KM</div>
                   <div>
-                    <p className="text-xl font-bold text-foreground">Kwame Mensah</p>
-                    <p className="text-slate-500 text-sm font-black uppercase tracking-widest">CEO, TechServe Ghana</p>
+                    <p className="text-lg font-bold text-foreground">Kwame Mensah</p>
+                    <p className="text-slate-500 text-xs font-black uppercase tracking-widest">CEO, TechServe Ghana</p>
                   </div>
                 </div>
               </div>

@@ -51,10 +51,13 @@ export default function CEOProfile() {
                         <div className="glass rounded-[3rem] p-8 border border-border overflow-hidden relative group">
                             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-8">
                                 <Image
-                                    src={CEO_DATA.image || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"}
+                                    src={CEO_DATA.image || ""}
                                     alt={CEO_DATA.name}
                                     fill
                                     className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                    placeholder="blur"
+                                    quality={60}
+                                    sizes="(max-width: 768px) 100vw, 33vw"
                                 />
                             </div>
 
@@ -86,7 +89,7 @@ export default function CEOProfile() {
                                 <Link href="https://github.com/andrewosae" target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
                                     <Github size={18} />
                                 </Link>
-                                <Link href="https://twitter.com/andrewosae" target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
+                                <Link href="https://x.com/iamsuingjuju" target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
                                     <Twitter size={18} />
                                 </Link>
                                 <Link href="https://linkedin.com/in/andrewosae" target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">

@@ -76,7 +76,7 @@ export default function Contact() {
                                     <input
                                         type="text"
                                         placeholder="John Doe"
-                                        className="w-full px-6 py-4 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl focus:border-brand-gold/50 outline-none transition-all text-foreground placeholder:text-slate-400"
+                                        className="w-full px-6 py-4 bg-white/5 dark:bg-black/5 border border-white/10 dark:border-black/10 rounded-2xl focus:border-brand-gold/50 outline-none transition-all text-black dark:text-white placeholder:text-slate-400"
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -84,17 +84,17 @@ export default function Contact() {
                                     <input
                                         type="email"
                                         placeholder="john@example.com"
-                                        className="w-full px-6 py-4 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl focus:border-brand-gold/50 outline-none transition-all text-foreground placeholder:text-slate-400"
+                                        className="w-full px-6 py-4 bg-white/5 dark:bg-black/5 border border-white/10 dark:border-black/10 rounded-2xl focus:border-brand-gold/50 outline-none transition-all text-black dark:text-white placeholder:text-slate-400"
                                     />
                                 </div>
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-bold text-slate-500 dark:text-slate-300 ml-1">Service Interested In</label>
                                 <select className="w-full px-6 py-4 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl focus:border-brand-gold/50 outline-none transition-all text-foreground appearance-none">
-                                    <option className="bg-background">Web Development</option>
-                                    <option className="bg-background">SEO Optimization</option>
-                                    <option className="bg-background">Brand Identity</option>
-                                    <option className="bg-background">Digital Strategy</option>
+                                    <option className="bg-white dark:bg-[#0A0A0A] text-black dark:text-white">Web Development</option>
+                                    <option className="bg-white dark:bg-[#0A0A0A] text-black dark:text-white">SEO Optimization</option>
+                                    <option className="bg-white dark:bg-[#0A0A0A] text-black dark:text-white">Brand Identity</option>
+                                    <option className="bg-white dark:bg-[#0A0A0A] text-black dark:text-white">Digital Strategy</option>
                                 </select>
                             </div>
                             <div className="space-y-2">
@@ -102,7 +102,7 @@ export default function Contact() {
                                 <textarea
                                     rows={4}
                                     placeholder="How can we help you?"
-                                    className="w-full px-6 py-4 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl focus:border-brand-gold/50 outline-none transition-all text-foreground placeholder:text-slate-400 resize-none"
+                                    className="w-full px-6 py-4 bg-white/5 dark:bg-black/5 border border-white/10 dark:border-black/10 rounded-2xl focus:border-brand-gold/50 outline-none transition-all text-black dark:text-white placeholder:text-slate-400 resize-none"
                                 />
                             </div>
                             <button

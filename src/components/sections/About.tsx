@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
 import { CEO_DATA } from "@/lib/constants";
+import teamMembers from "@/assets/teammembers.jpg";
 
 export default function About() {
     return (
@@ -23,10 +24,13 @@ export default function About() {
                             <div className="absolute inset-0 bg-brand-navy rounded-3xl" />
                             <div className="absolute inset-0 overflow-hidden rounded-3xl">
                                 <Image
-                                    src="/img/teammembers.jpg?v=1"
+                                    src={teamMembers}
                                     alt="Our Team"
                                     fill
                                     className="object-cover"
+                                    placeholder="blur"
+                                    quality={60}
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                 />
                             </div>
 

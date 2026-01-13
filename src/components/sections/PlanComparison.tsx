@@ -23,10 +23,10 @@ export default function PlanComparison() {
                 <div className="overflow-x-auto">
                     <div className="min-w-[1000px] mb-12">
                         {/* Table Header */}
-                        <div className="grid grid-cols-[2fr_1fr_1fr_1fr] bg-slate-50 dark:bg-white/5 py-6 px-10 rounded-t-xl border border-border">
-                            <div className="text-slate-500 font-bold text-xs">Features</div>
+                        <div className="grid grid-cols-[2fr_1fr_1fr_1fr] bg-slate-50 dark:bg-white py-6 px-10 rounded-t-xl border border-border">
+                            <div className="text-slate-500 dark:text-slate-500 font-bold text-xs">Features</div>
                             {PLAN_COMPARISON.plans.map((plan, i) => (
-                                <div key={i} className="text-center font-bold text-foreground text-sm">
+                                <div key={i} className="text-center font-bold text-slate-900 dark:text-slate-900 text-sm">
                                     {plan}
                                 </div>
                             ))}

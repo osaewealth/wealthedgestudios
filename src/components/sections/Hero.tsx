@@ -6,13 +6,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+import newEliteWeb from "@/assets/newelitewebpicture.jpg";
+import digitalPresence from "@/assets/digitalpresencenew.jpg";
+import branding from "@/assets/brandingnew.jpg";
+import ecommerce from "@/assets/ecommerceimage.jpg";
+
 const SLIDES = [
     {
         id: "01",
         title: "ELITE WEB",
         subtitle: "ENGINEERING",
         description: "High-performance, custom-built websites using the latest technologies. We engineer digital experiences that are fast, intuitive, and built to scale.",
-        image: "/img/newelitewebpicture.jpg?v=1",
+        image: newEliteWeb,
         label: "// Web Development Excellence"
     },
     {
@@ -20,15 +25,15 @@ const SLIDES = [
         title: "STRATEGIC",
         subtitle: "SEO DOMINANCE",
         description: "Drive organic traffic and dominate search results with our advanced SEO strategies. We ensure your brand commands the attention it deserves.",
-        image: "/img/digitalpresencenew.jpg?v=1",
+        image: digitalPresence,
         label: "// Advanced Search Engine Optimization"
     },
     {
         id: "03",
         title: "PREMIUM",
-        subtitle: "BRAND DESIGN",
+        subtitle: "GRAPHIC DESIGN",
         description: "Forging powerful visual identities and narratives that resonate with your audience and build immediate trust across all digital touchpoints.",
-        image: "/img/brandingnew.jpg?v=1",
+        image: branding,
         label: "// Strategic Visual Identity"
     },
     {
@@ -36,7 +41,7 @@ const SLIDES = [
         title: "E-COMMERCE",
         subtitle: "POWERHOUSES",
         description: "Building secure and scalable e-commerce platforms with seamless payment gateway integrations to turn your clicks into sustainable cash flow.",
-        image: "/img/ecommerceimage.jpg?v=1",
+        image: ecommerce,
         label: "// High-Conversion Retail"
     }
 ];
@@ -57,15 +62,17 @@ export default function Hero() {
     return (
         <section className="relative h-screen w-full overflow-hidden bg-brand-charcoal">
             {/* Preload all hero images to prevent lag */}
-            <div className="hidden">
+            {/* Preload all hero images to prevent lag - Optimization: Load efficiently in background */}
+            <div className="absolute inset-0 w-1 h-1 opacity-0 pointer-events-none overflow-hidden">
                 {SLIDES.map((slide) => (
                     <Image
                         key={slide.id}
                         src={slide.image}
                         alt={slide.title}
                         fill
-                        priority
-                        sizes="1px"
+                        sizes="100vw"
+                        quality={60}
+                        priority={false}
                     />
                 ))}
             </div>
@@ -87,6 +94,9 @@ export default function Hero() {
                             fill
                             className="object-cover contrast-[1.1] brightness-[0.8] saturate-[1.1]"
                             priority
+                            placeholder="blur"
+                            quality={60}
+                            sizes="100vw"
                         />
                     </div>
 

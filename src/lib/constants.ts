@@ -9,6 +9,26 @@ import {
     Layout
 } from "lucide-react";
 
+import influenceChurch from "@/assets/influencechurch.png";
+import vine from "@/assets/vine.png";
+import appolisConsult from "@/assets/appolisconsult.png";
+import niobe from "@/assets/niobe.png";
+import amanex from "@/assets/amanex.png";
+import elisbaage from "@/assets/elisbaage.png";
+import aiden from "@/assets/aiden.png";
+import rango from "@/assets/rango.png";
+import adwoa from "@/assets/adwoa.png";
+import zoroluf from "@/assets/zoroluf.jpeg";
+import bjh from "@/assets/bjh.png";
+import afrotrend from "@/assets/afrotrend.png";
+import kiki from "@/assets/kiki.png";
+import communityOutreach from "@/assets/graphicdesigns/community_outreach.png";
+import brandConcept from "@/assets/graphicdesigns/1.jpeg";
+import corporateStationery from "@/assets/graphicdesigns/2.jpeg";
+import socialCampaign from "@/assets/graphicdesigns/3.jpeg";
+import productPackaging from "@/assets/graphicdesigns/4.jpeg";
+import founderImage from "@/assets/founder.jpeg";
+
 export const CONTACT_INFO = {
     phone: "0504148575",
     email: "info@wealthedgestudios.com",
@@ -294,7 +314,7 @@ export const PROJECTS = [
         title: "Influence City Church",
         category: "Web Development",
         industry: "Religion",
-        image: "/img/influencechurch.png",
+        image: influenceChurch,
         slug: "influence-city-church",
         link: "https://influencecitychurch.netlify.app/"
     },
@@ -302,7 +322,7 @@ export const PROJECTS = [
         title: "Vine Digital Solutions",
         category: "Web Development",
         industry: "Technology",
-        image: "/img/vine.png",
+        image: vine,
         slug: "vine-digital",
         link: "http://www.vineaccra.com/"
     },
@@ -310,7 +330,7 @@ export const PROJECTS = [
         title: "Appolis Consult",
         category: "SEO Optimization",
         industry: "Consulting",
-        image: "/img/appolisconsult.png",
+        image: appolisConsult,
         slug: "appolis-consult",
         link: "https://appolisconsult.com/"
     },
@@ -318,7 +338,7 @@ export const PROJECTS = [
         title: "Niobe Beauty & Spa",
         category: "Web Development",
         industry: "Health & Beauty",
-        image: "/img/niobe.png",
+        image: niobe,
         slug: "niobe-beauty",
         link: "https://www.niobebeauty.com/"
     },
@@ -326,7 +346,7 @@ export const PROJECTS = [
         title: "Amanex Group",
         category: "E-commerce",
         industry: "Retail",
-        image: "/img/amanex.png",
+        image: amanex,
         slug: "amanex-group",
         link: "https://amanexcomltd.com/"
     },
@@ -334,7 +354,7 @@ export const PROJECTS = [
         title: "Elisbaage Limited",
         category: "Performance",
         industry: "Logistics",
-        image: "/img/elisbaage.png",
+        image: elisbaage,
         slug: "elisbaage",
         link: "https://elisbaage.com/"
     },
@@ -342,7 +362,7 @@ export const PROJECTS = [
         title: "Aiden International",
         category: "Web Development",
         industry: "Real Estate",
-        image: "/img/aiden.png",
+        image: aiden,
         slug: "aiden-international",
         link: "https://www.aidenhapartments.com/"
     },
@@ -350,7 +370,7 @@ export const PROJECTS = [
         title: "Rango Logistics",
         category: "Web Development",
         industry: "Logistics",
-        image: "/img/rango.png",
+        image: rango,
         slug: "rango-logistics",
         link: "https://rangoccl.com/"
     },
@@ -358,7 +378,7 @@ export const PROJECTS = [
         title: "Adwoa Beauty Care",
         category: "Google Ads",
         industry: "Health & Beauty",
-        image: "/img/adwoa.png",
+        image: adwoa,
         slug: "adwoa-beauty",
         link: "https://www.adjoaa.com/en-gh"
     },
@@ -366,7 +386,7 @@ export const PROJECTS = [
         title: "Zoroluf Enterprise",
         category: "Web Development",
         industry: "Technology",
-        image: "/img/zoroluf.jpeg",
+        image: zoroluf,
         slug: "zoroluf",
         link: "https://zoroluf.com/"
     },
@@ -374,7 +394,7 @@ export const PROJECTS = [
         title: "BJH Logistics",
         category: "SEO Optimization",
         industry: "Logistics",
-        image: "/img/bjh.png",
+        image: bjh,
         slug: "bjh-logistics",
         link: "https://www.bjhlogistics.com/"
     },
@@ -382,7 +402,7 @@ export const PROJECTS = [
         title: "AfroTrend Ghana",
         category: "Graphic Design",
         industry: "Fashion",
-        image: "/img/afrotrend.png",
+        image: afrotrend,
         slug: "afrotrend",
         link: "#"
     },
@@ -390,8 +410,48 @@ export const PROJECTS = [
         title: "Kiki Clothing",
         category: "E-commerce",
         industry: "Fashion",
-        image: "/img/kiki.png",
+        image: kiki,
         slug: "kiki-clothing",
+        link: "#"
+    },
+    {
+        title: "Community Outreach Flyer",
+        category: "Graphic Design",
+        industry: "Non-Profit",
+        image: communityOutreach,
+        slug: "community-outreach",
+        link: "#"
+    },
+    {
+        title: "Brand Identity Concept",
+        category: "Graphic Design",
+        industry: "Branding",
+        image: brandConcept,
+        slug: "brand-identity-concept",
+        link: "#"
+    },
+    {
+        title: "Corporate Stationery",
+        category: "Graphic Design",
+        industry: "Corporate",
+        image: corporateStationery,
+        slug: "corporate-stationery",
+        link: "#"
+    },
+    {
+        title: "Social Media Campaign",
+        category: "Graphic Design",
+        industry: "Marketing",
+        image: socialCampaign,
+        slug: "social-media-campaign",
+        link: "#"
+    },
+    {
+        title: "Product Packaging",
+        category: "Graphic Design",
+        industry: "Retail",
+        image: productPackaging,
+        slug: "product-packaging",
         link: "#"
     }
 ];
@@ -401,7 +461,7 @@ export const CEO_DATA = {
     role: "Front End Website Developer",
     email: "andrewvalmount@gmail.com",
     phone: "+233 504148575",
-    image: "/img/founder.jpeg",
+    image: founderImage,
     location: "Spintex-Accra, Ghana",
     bio: "Hello, I'm Andrew Osae, a passionate and detail-oriented web designer based in Accra, Ghana. I specialize in creating clean, responsive, and SEO-optimized websites using WordPress, HTML, and other modern web tools. Through my agency, WealthEdge Studio, I help real estate agents, hotel owners, and restaurant businesses build an impressive online presence that drives results. Whether you're starting from scratch or need a digital makeover, I'm here to bring your vision to life with functionality and finesse.",
     competencies: [

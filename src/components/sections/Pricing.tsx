@@ -52,17 +52,17 @@ export default function Pricing() {
                             )}
 
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold mb-2 text-foreground">{plan.name}</h3>
+                                <h3 className="text-xl font-bold mb-2 text-foreground dark:text-white">{plan.name}</h3>
                                 <div className="flex items-baseline gap-1">
                                     <span className="text-4xl font-black text-brand-gold">GH¢{plan.price}</span>
-                                    <span className="text-slate-500 text-sm">/ project</span>
+                                    <span className="text-slate-500 dark:text-slate-400 text-sm">/ project</span>
                                 </div>
-                                <p className="text-slate-500 text-sm mt-1">Starting from ${plan.dollars}</p>
+                                <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Starting from ${plan.dollars}</p>
                             </div>
 
                             <ul className="space-y-4 mb-8">
                                 {plan.features.map((feature) => (
-                                    <li key={feature} className="flex items-center gap-3 text-foreground/80 text-sm">
+                                    <li key={feature} className="flex items-center gap-3 text-foreground/80 dark:text-slate-300 text-sm">
                                         <Check className="w-5 h-5 text-brand-gold flex-shrink-0" />
                                         {feature}
                                     </li>
@@ -112,17 +112,17 @@ export default function Pricing() {
                                 className={`p-8 rounded-3xl border glass border-black/5 dark:border-white/5 hover:border-brand-gold/30 transition-all ${plan.popular ? "ring-2 ring-brand-gold/50" : ""}`}
                             >
                                 <div className="mb-8">
-                                    <h3 className="text-xl font-bold mb-2 text-foreground">{plan.name}</h3>
+                                    <h3 className="text-xl font-bold mb-2 text-foreground dark:text-white">{plan.name}</h3>
                                     <div className="flex items-baseline gap-1">
                                         <span className="text-3xl font-black text-brand-gold">GH¢{plan.price}</span>
-                                        <span className="text-slate-500 text-sm">/ mo</span>
+                                        <span className="text-slate-500 dark:text-slate-400 text-sm">/ mo</span>
                                     </div>
-                                    <p className="text-slate-500 text-xs mt-1">Approx. ${plan.dollars}/month</p>
+                                    <p className="text-slate-500 dark:text-slate-400 text-xs mt-1">Approx. ${plan.dollars}/month</p>
                                 </div>
 
                                 <ul className="space-y-3 mb-8">
                                     {plan.features.map((feature) => (
-                                        <li key={feature} className="flex items-center gap-3 text-slate-500 text-xs">
+                                        <li key={feature} className="flex items-center gap-3 text-slate-500 dark:text-slate-300 text-xs">
                                             <div className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
                                             {feature}
                                         </li>

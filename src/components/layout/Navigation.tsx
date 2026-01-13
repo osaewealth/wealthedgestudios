@@ -40,7 +40,7 @@ export default function Navigation() {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || pathname !== "/"
-                    ? "py-4 glass border-b border-black/5 dark:border-white/10 shadow-lg shadow-black/[0.03]"
+                    ? "py-4 bg-[#0A0A0A] border-b border-white/10 shadow-lg shadow-black/[0.03]"
                     : "py-6 bg-transparent"
                     }`}
             >
@@ -53,7 +53,7 @@ export default function Navigation() {
                             height={56}
                             className="w-14 h-14 object-contain"
                         />
-                        <span className={`text-xl font-black tracking-tighter uppercase transition-colors ${isScrolled || pathname !== "/" ? "text-foreground" : "text-white"}`}>
+                        <span className={`text-xl font-black tracking-tighter uppercase transition-colors text-white`}>
                             Wealth Edge <span className="text-brand-gold">Studios</span>
                         </span>
                     </Link>
@@ -68,9 +68,7 @@ export default function Navigation() {
                         >
                             <button className={`flex items-center gap-1.5 text-sm font-bold transition-colors ${pathname.startsWith('/services')
                                 ? 'text-brand-gold'
-                                : isScrolled || pathname !== "/"
-                                    ? 'text-slate-500 dark:text-slate-300 hover:text-brand-gold'
-                                    : 'text-white/90 hover:text-brand-gold'
+                                : 'text-white/90 hover:text-brand-gold'
                                 }`}>
                                 Services <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                             </button>
@@ -117,9 +115,7 @@ export default function Navigation() {
                                 href={link.href}
                                 className={`text-sm font-bold transition-colors ${pathname === link.href
                                     ? "text-brand-gold"
-                                    : isScrolled || pathname !== "/"
-                                        ? "text-slate-500 dark:text-slate-300 hover:text-brand-gold"
-                                        : "text-white/90 hover:text-brand-gold"
+                                    : "text-white/90 hover:text-brand-gold"
                                     }`}
                             >
                                 {link.name}
