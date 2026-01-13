@@ -2,7 +2,7 @@
 
 import Hero from "@/components/sections/Hero";
 import Navigation from "@/components/layout/Navigation";
-import BlogPreview from "@/components/sections/BlogPreview";
+
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -163,7 +163,7 @@ export default function Home() {
             <div className="flex-1 relative">
               <div className="p-1 glass rounded-[4rem] border border-black/5 dark:border-white/10 overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80"
+                  src="/img/ecommerce-platforms.jpg"
                   alt="Ecommerce Excellence"
                   width={800}
                   height={600}
@@ -275,7 +275,7 @@ export default function Home() {
         </div>
       </section>
 
-      <BlogPreview />
+
 
       {/* Core Values / Stats CTA Section */}
       <section className="py-32 bg-background relative">

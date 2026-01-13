@@ -81,7 +81,7 @@ export const PLAN_COMPARISON = {
         { name: "Speed Optimization", values: [true, true, true] },
         { name: "Free Domain", values: [true, true, true] },
         { name: "Newsletter Signups", values: [true, true, true] },
-        { name: "Blog", values: [true, true, true] },
+
         { name: "Premium Designs", values: [false, true, true] },
         { name: "SEO Setup", values: [false, true, true] },
         { name: "Online Payments", values: [false, true, true] },

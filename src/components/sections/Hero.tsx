@@ -11,32 +11,32 @@ const SLIDES = [
         id: "01",
         title: "ELITE WEB",
         subtitle: "ENGINEERING",
-        description: "We are shaping the digital landscape of businesses through high-performance web engineering. We optimize processes and drive innovation to build your competitive edge.",
-        image: "/img/webbbbb.jpg",
+        description: "High-performance, custom-built websites using the latest technologies. We engineer digital experiences that are fast, intuitive, and built to scale.",
+        image: "/img/webbbbb.jpg?v=1",
         label: "// Web Development Excellence"
     },
     {
         id: "02",
         title: "STRATEGIC",
-        subtitle: "BRANDING",
-        description: "Forging powerful visual identities and narratives that resonate with your audience and build immediate trust across all digital touchpoints.",
-        image: "/img/branding.jpg",
-        label: "// Elite Brand Design"
+        subtitle: "SEO DOMINANCE",
+        description: "Drive organic traffic and dominate search results with our advanced SEO strategies. We ensure your brand commands the attention it deserves.",
+        image: "/img/SEo.jpg?v=1",
+        label: "// Advanced Search Engine Optimization"
     },
     {
         id: "03",
-        title: "SEARCH ENGINE",
-        subtitle: "DOMINANCE",
-        description: "Drive organic traffic and dominate search results with our advanced SEO strategies. We ensure your brand commands the attention it deserves.",
-        image: "/img/SEo.jpg",
-        label: "// Advanced SEO Strategies"
+        title: "PREMIUM",
+        subtitle: "BRAND DESIGN",
+        description: "Forging powerful visual identities and narratives that resonate with your audience and build immediate trust across all digital touchpoints.",
+        image: "/img/branding.jpg?v=1",
+        label: "// Strategic Visual Identity"
     },
     {
         id: "04",
         title: "E-COMMERCE",
         subtitle: "POWERHOUSES",
         description: "Building secure and scalable e-commerce platforms with seamless payment gateway integrations to turn your clicks into sustainable cash flow.",
-        image: "/img/ecommerceimage.jpg",
+        image: "/img/ecommerceimage.jpg?v=1",
         label: "// High-Conversion Retail"
     }
 ];
@@ -56,29 +56,31 @@ export default function Hero() {
 
     return (
         <section className="relative h-screen w-full overflow-hidden bg-brand-charcoal">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="popLayout">
                 <motion.div
                     key={current}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
                     className="absolute inset-0"
                 >
                     {/* Background Image with Sharpening Filter */}
-                    <Image
-                        src={SLIDES[current].image}
-                        alt={SLIDES[current].title}
-                        fill
-                        className="object-cover contrast-[1.1] brightness-[1.1] saturate-[1.1]"
-                        priority
-                    />
+                    <div className="absolute inset-0 overflow-hidden">
+                        <Image
+                            src={SLIDES[current].image}
+                            alt={SLIDES[current].title}
+                            fill
+                            className="object-cover contrast-[1.1] brightness-[0.8] saturate-[1.1]"
+                            priority
+                        />
+                    </div>
 
-                    {/* Dark Overlay - Reduced opacity for clarity, removed blur */}
-                    <div className="absolute inset-0 bg-[#0F172A]/40" />
+                    {/* Dark Overlay - Adjusted for better contrast with text */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal/80 via-brand-charcoal/40 to-transparent z-0" />
 
-                    {/* Geometric Overlays (Blue Polygons inspired by user reference) */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-40 dark:opacity-60" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    {/* Geometric Overlays */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-40 dark:opacity-60 z-10" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <motion.polygon
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -93,25 +95,15 @@ export default function Hero() {
                             points="100,0 70,0 85,100 100,100"
                             className="fill-brand-navy/20"
                         />
-                        <motion.path
-                            initial={{ pathLength: 0, opacity: 0 }}
-                            animate={{ pathLength: 1, opacity: 0.2 }}
-                            transition={{ duration: 2, delay: 0.5 }}
-                            d="M 30 0 L 15 100 M 75 0 L 90 100"
-                            stroke="currentColor"
-                            strokeWidth="0.1"
-                            fill="none"
-                            className="text-brand-gold"
-                        />
                     </svg>
 
                     {/* Content Container */}
-                    <div className="container mx-auto px-6 h-full flex flex-col justify-center relative z-10">
+                    <div className="container mx-auto px-6 h-full flex flex-col justify-center relative z-20">
                         <div className="max-w-4xl">
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 }}
+                                transition={{ delay: 0.2, duration: 0.5 }}
                                 className="text-brand-gold font-mono text-sm md:text-base tracking-[0.2em] mb-6"
                             >
                                 {SLIDES[current].label}
@@ -120,11 +112,11 @@ export default function Hero() {
                             <motion.h1
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.4 }}
-                                className="text-6xl md:text-8xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter text-white mb-8"
+                                transition={{ delay: 0.3, duration: 0.6 }}
+                                className="text-5xl md:text-8xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter text-white mb-8"
                             >
                                 {SLIDES[current].title} <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-transparent via-white/40 to-white/10 decoration-brand-gold decoration-4 underline-offset-[20px]">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/40 to-white/10 decoration-brand-gold decoration-4 underline-offset-[20px]">
                                     {SLIDES[current].subtitle}
                                 </span>
                             </motion.h1>
@@ -132,21 +124,21 @@ export default function Hero() {
                             <motion.p
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.6 }}
-                                className="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed mb-12"
+                                transition={{ delay: 0.4, duration: 0.6 }}
+                                className="text-slate-200 text-lg md:text-xl max-w-2xl leading-relaxed mb-12"
                             >
                                 {SLIDES[current].description}
                             </motion.p>
 
                             <motion.div
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.8 }}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.5, duration: 0.4 }}
                                 className="flex items-center gap-8"
                             >
                                 <Link href="/services">
                                     <button className="px-10 py-5 bg-brand-gold text-brand-charcoal font-black rounded-sm hover:scale-105 transition-all shadow-2xl flex items-center gap-3 group uppercase tracking-widest text-sm">
-                                        Learn More
+                                        Explore Solutions
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </button>
                                 </Link>
@@ -157,7 +149,7 @@ export default function Hero() {
             </AnimatePresence>
 
             {/* Slider Navigation */}
-            <div className="absolute bottom-12 left-0 right-0 z-20">
+            <div className="absolute bottom-12 left-0 right-0 z-30">
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <div className="flex items-center gap-8">
                         <div className="flex items-center gap-4 text-white font-black tracking-widest text-lg">
@@ -197,8 +189,8 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Aesthetic Grain Overlay - Reduced for clarity */}
-            <div className="absolute inset-0 z-10 pointer-events-none opacity-[0.01] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+            {/* Aesthetic Grain Overlay */}
+            <div className="absolute inset-0 z-10 pointer-events-none opacity-[0.015] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         </section>
     );
 }
