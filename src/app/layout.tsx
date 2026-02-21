@@ -13,6 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://wealthedgestudios.com"),
   title: "Wealth Edge Studios | Premium Digital Agency & Web Design",
   description: "World-class website design, SEO, and digital marketing services in Ghana. Elevate your brand with Wealth Edge Studios.",
   icons: {
