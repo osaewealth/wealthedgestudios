@@ -18,7 +18,8 @@ import {
     Linkedin,
     ExternalLink,
     ArrowLeft,
-    MessageCircle
+    MessageCircle,
+    BookOpen
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,7 +53,7 @@ export default function CEOProfile() {
                             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-8">
                                 <Image
                                     src={CEO_DATA.image || ""}
-                                    alt={CEO_DATA.name}
+                                    alt={`Andrew Osae, Founder of Wealth Edge Studios in Ghana`}
                                     fill
                                     className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
                                     placeholder="blur"
@@ -91,6 +92,9 @@ export default function CEOProfile() {
                                 </Link>
                                 <Link href="https://x.com/iamsuingjuju" target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
                                     <Twitter size={18} />
+                                </Link>
+                                <Link href={CEO_DATA.medium} target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all" title="Read my story on Medium">
+                                    <BookOpen size={18} />
                                 </Link>
                                 <Link href="https://linkedin.com/in/andrewosae" target="_blank" className="w-10 h-10 rounded-xl glass flex items-center justify-center text-slate-400 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
                                     <Linkedin size={18} />
