@@ -88,7 +88,7 @@ export default function About() {
 
                 <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-12">
                     {[
-                        { title: "Who We Are", desc: "WopeDigital is a leading digital agency in Accra, Ghana. Since 2010, we've helped hundreds of businesses establish a dominant online presence through world-class design and SEO." },
+                        { title: "Who We Are", desc: "Wealth Edge Studios is a leading digital agency in Accra, Ghana. Since 2010, we've helped hundreds of businesses establish a dominant online presence through world-class design and SEO." },
                         { title: "Our Mission", desc: "Our aim is to digitalize Africa and beyond. We believe every business deserves a digital identity that competes on the global stage, regardless of size or location." },
                         { title: "Client Experience", desc: "Our clients are our biggest fans. We've reached millions of people worldwide through thousands of successful online campaigns. Their growth is our primary success metric." }
                     ].map((item, i) => (
@@ -113,7 +113,7 @@ export default function About() {
                             <span className="text-xs font-black text-brand-gold uppercase tracking-[0.3em] mb-4 block">Our Captain</span>
                             <h2 className="text-4xl font-black mb-6 text-foreground">Meet <span className="text-brand-gold">{CEO_DATA.name}</span></h2>
                             <p className="text-slate-500 mb-8 max-w-xl text-lg leading-relaxed">
-                                Our founder, {CEO_DATA.name}, is a visionary web developer with over 7 years of experience in the digital space.
+                                Our founder, {CEO_DATA.name}, is a visionary web developer with over 5 years of experience in the digital space.
                                 He leads Wealth Edge Studios with a commitment to technical excellence and high-impact design.
                             </p>
                             <Link
