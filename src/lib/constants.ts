@@ -27,7 +27,7 @@ import brandConcept from "@/assets/graphicdesigns/1.jpeg";
 import corporateStationery from "@/assets/graphicdesigns/2.jpeg";
 import socialCampaign from "@/assets/graphicdesigns/3.jpeg";
 import productPackaging from "@/assets/graphicdesigns/4.jpeg";
-import founderImage from "@/assets/founder.jpeg";
+import founderImage from "@/assets/andrew.png";
 
 export const CONTACT_INFO = {
     phone: "0504148575",
@@ -461,6 +461,7 @@ export const CEO_DATA = {
     role: "Front End Website Developer",
     email: "andrewvalmount@gmail.com",
     phone: "+233 504148575",
+    medium: "https://medium.com/@osaewealth/building-vision-into-systems-the-story-of-andrew-osae-and-wealth-edge-studios-7accf8477bfb",
     image: founderImage,
     location: "Spintex-Accra, Ghana",
     bio: "Hello, I'm Andrew Osae, a passionate and detail-oriented web designer based in Accra, Ghana. I specialize in creating clean, responsive, and SEO-optimized websites using WordPress, HTML, and other modern web tools. Through my agency, WealthEdge Studio, I help real estate agents, hotel owners, and restaurant businesses build an impressive online presence that drives results. Whether you're starting from scratch or need a digital makeover, I'm here to bring your vision to life with functionality and finesse.",
