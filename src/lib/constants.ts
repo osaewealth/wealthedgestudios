@@ -27,7 +27,7 @@ import brandConcept from "@/assets/graphicdesigns/1.jpeg";
 import corporateStationery from "@/assets/graphicdesigns/2.jpeg";
 import socialCampaign from "@/assets/graphicdesigns/3.jpeg";
 import productPackaging from "@/assets/graphicdesigns/4.jpeg";
-import founderImage from "@/assets/founder.jpeg";
+import founderImage from "@/assets/andrew.png";
 
 export const CONTACT_INFO = {
     phone: "0504148575",

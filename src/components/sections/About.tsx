@@ -130,7 +130,7 @@ export default function About() {
                                     src={CEO_DATA.image || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"}
                                     alt={CEO_DATA.name}
                                     fill
-                                    className="object-cover"
+                                    className="object-cover object-top"
                                 />
                             </div>
                         </div>
